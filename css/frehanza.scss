@@ -1,0 +1,142 @@
+/*
+Template Name: Bolby
+Version: 1.0
+Author: PxlSolutions
+Author URI: http://themeforest.net/user/pxlsolutions
+Description: Portfolio/CV/Resume HTML Template
+
+[TABLE OF CONTENTS]
+
+01. Base
+02. Typography
+03. Preloader
+04. Header
+05. Sections
+06. Parallax Shapes
+07. Skills
+08. Service
+09. Portfolio
+10. Facts
+11. Prices
+12. Testimonials
+13. Blog
+14. Clients
+15. Contact
+16. Helper
+17. Dark Mode
+18. Buttons
+19. Bootstrap Components
+20. Theme elements
+21. Slick
+22. Responsive
+
+*/
+@import "sass/mixins";
+@import "sass/base";
+@import "sass/header";
+@import "sass/main";
+@import "sass/dark";
+@import "sass/buttons";
+@import "sass/elements";
+@import "sass/slick";
+@import "sass/responsive";
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: yellow;
+    font-family: 'Montserrat', sans-serif;
+    
+    .logo {
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+  }
+  
+  .box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    border-radius: 8vmin;
+    background-color: transparent;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+    
+    &:hover {
+       position: relative;
+       width: calc(300px + 50px);
+       background-color: white;
+       cursor: default;
+        
+         .box__group {
+          position: relative;
+          transform: translateX(0);
+          opacity: 1;
+        }
+      
+        //No flickering on hover//
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 110%;
+          width: 101%;
+          box-sizing: border-box;
+          
+          right: 350px;
+          z-index: -1;
+        }
+      }
+    
+    &__copy {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 4rem;
+      margin-left: 2px;
+    }
+    
+    &__group {
+      //position: absolute;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      opacity: 0;
+      transition: .4s ease-in-out;
+      transition-delay: .2s;
+      transform: translateX(290px);
+      
+      hr {
+        width: 3px;
+        height: 30px;
+        background-color: #000;
+        border: none;
+        margin: 0 15px;
+      }
+    }
+    
+    &__date {
+      font-size: 1.5rem;
+      margin-left: 15px;
+      color: #000
+    }
+    
+    &__link {
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: .7rem;
+      color: #000;
+      letter-spacing: 1px;
+    }
+  }

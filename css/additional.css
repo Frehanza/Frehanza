@@ -1,0 +1,301 @@
+/*---------------------------------------------------*/
+/*	EXPERIENCES
+/*---------------------------------------------------*/
+
+.experiences_info .informations_inner{
+	width: 100%;
+	height: auto;
+	display: flex;
+}
+.experiences_info .left{
+	width: 50%;
+	padding-right: 100px;
+}
+.experiences_info .left .text{
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+.experiences_info .left .text p{
+	margin-bottom: 35px;
+}
+.experiences_info .left .text p:last-child{
+	margin-bottom: 0px;
+}
+.experiences_info .right{
+	width: 50%;
+	position: relative;
+	top: 10px;
+}
+
+/*---------------------------------------------------*/
+/*	Tabs
+/*---------------------------------------------------*/
+
+::selection{
+  background: rgba(23,162,184,0.3);
+}
+.experiences-wrapper{ 
+  width: 100%;
+  border-radius: 5px;
+  background: #fff;
+}
+.experiences-wrapper header{
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.experiences-wrapper nav{
+  position: relative;
+  width: 80%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.experiences-wrapper nav label{
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  color: #17a2b8;
+  font-size: 17px;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+.experiences-wrapper nav label:hover{
+  background: rgba(23,162,184,0.3);
+}
+#home:checked ~ nav label.home,
+#blog:checked ~ nav label.blog,
+#code:checked ~ nav label.code,
+#help:checked ~ nav label.help,
+  #about:checked ~ nav label.about{
+  color: #fff;
+}
+nav label i{
+  padding-right: 7px;
+}
+nav .slider{
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background: #17a2b8;
+  transition: all 0.3s ease;
+}
+input[type="radio"]{
+  display: none;
+}
+#blog:checked ~ nav .slider{
+  left: 20%;
+}
+#code:checked ~ nav .slider{
+  left: 40%;
+}
+#help:checked ~ nav .slider{
+  left: 60%;
+}
+#about:checked ~ nav .slider{
+  left: 80%;
+}
+section .content{
+  display: none;
+  background: #fff;
+}
+#home:checked ~ section .content-1,
+#blog:checked ~ section .content-2,
+#code:checked ~ section .content-3,
+#help:checked ~ section .content-4,
+#about:checked ~ section .content-5{
+  display: block;
+}
+section .content .title{
+  font-size: 21px;
+  font-weight: 500;
+  margin: 30px 0 10px 0;
+}
+section .content p{
+text-align: justify;
+}
+
+/* additional */
+.big-article {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 40px auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  border-radius: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(69,67,96,0.1);
+    -moz-box-shadow: 0px 5px 20px 0px rgba(69,67,96,0.1);
+    box-shadow: 0px 5px 20px 0px rgba(69,67,96,0.1);
+  -webkit-transition: all 120ms ease;
+  transition: all 120ms ease;
+}
+
+.project-text-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 400px;
+  padding: 80px 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.big-article-image-wrapper {
+  width: 58.33333333%;
+  padding-left: 0px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-image: url("../images/collection_mobile.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.big-article-image-wrapper.virus {
+  background-image: url("../img/works/VIRUS.png");
+}
+
+.big-article-image-wrapper.jobfair {
+  background-image: url("../img/works/jobfair.png");
+}
+
+.big-article-image-wrapper.compfest {
+  background-image: url("../img/works/COMPFEST.png");
+}
+
+
+.project-tn-heading {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: 27px;
+  line-height: 1.3em;
+  text-align: left;
+}
+
+.project-tn-sub {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+/* hai */
+.card {
+  max-width: 960px;
+  border-radius: var(--border-radius-primary);
+  box-shadow: 24px 24px 80px rgba(0, 0, 0, 0.1);
+  padding: 20px 20px 28px 20px;
+  box-sizing: border-box;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  .card {
+    flex-direction: row;
+    align-items: center;
+    margin: 40px;
+    padding: 32px;
+ }
+}
+.card__image {
+  width: 100%;
+  max-height: 300px;
+  border-radius: var(--border-radius-primary);
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+@media (min-width: 576px) {
+  .card__image {
+    width: 45%;
+    max-height: none;
+    min-height: 400px;
+    margin-bottom: 0;
+ }
+}
+@media (min-width: 576px) {
+  .card__content {
+    width: 55%;
+    padding-left: 40px;
+ }
+}
+.card__date {
+  display: block;
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+@media (min-width: 576px) {
+  .card__date {
+    margin-bottom: 8px;
+ }
+}
+.card__title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-title);
+  line-height: var(--line-height-title);
+  color: var(--color-text);
+  box-decoration-break: clone;
+  background-image: linear-gradient(90deg, var(--color-highlight-primary), var(--color-highlight-secondary));
+  background-size: 100% 42%;
+  background-repeat: no-repeat;
+  background-position: 0 85%;
+  padding: 0 4px;
+  margin-left: -4px;
+}
+
+@media screen and (max-width: 767px) {
+  .project-text-wrapper {
+    padding-bottom: 10px;
+  }
+
+  .big-article-image-wrapper {
+    width: 100%;
+    height: 280px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+  }
+}
+
